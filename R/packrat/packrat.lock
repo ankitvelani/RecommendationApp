@@ -1,0 +1,99 @@
+PackratFormat: 1.4
+PackratVersion: 0.4.8.1
+RVersion: 3.3.3
+Repos: CRAN=https://cran.rstudio.com/
+
+Package: DBI
+Source: CRAN
+Version: 0.6
+Hash: c1a897fa11e50c1f70258830fc50b1f3
+
+Package: RMySQL
+Source: CRAN
+Version: 0.10.10
+Hash: b58272c148c4a0c3977dd08f8e935d01
+Requires: DBI
+
+Package: RUnit
+Source: CRAN
+Version: 0.4.31
+Hash: 62eb28673740eb6984f134cb2c179c55
+
+Package: Rcpp
+Source: CRAN
+Version: 0.12.10
+Hash: 6cf65d0dd6a92f2d43c8d4805d33efe9
+
+Package: arules
+Source: CRAN
+Version: 1.5-2
+Hash: 51557874151059c001b220da3bca3578
+
+Package: inline
+Source: CRAN
+Version: 0.3.14
+Hash: d2e10c068b7b3cc450bd630e69f89ce9
+
+Package: irlba
+Source: CRAN
+Version: 2.1.2
+Hash: 23fb0f166f3a2bdc2ac7b014b94b57a7
+
+Package: jsonlite
+Source: CRAN
+Version: 1.3
+Hash: b9cc3c97b7a6cd513e9b516fe881d6c9
+
+Package: magrittr
+Source: CRAN
+Version: 1.5
+Hash: bdc4d48c3135e8f3b399536ddf160df4
+
+Package: packrat
+Source: CRAN
+Version: 0.4.8-1
+Hash: 6ad605ba7b4b476d84be6632393f5765
+
+Package: plyr
+Source: CRAN
+Version: 1.8.4
+Hash: c9ddbdcfd74ff964e3e7d0b692a8dd70
+Requires: Rcpp
+
+Package: proxy
+Source: CRAN
+Version: 0.4-17
+Hash: ff9d67da15429df7be36755b4c13a9f5
+
+Package: rbenchmark
+Source: CRAN
+Version: 1.0.0
+Hash: 47b30ba84d5c1c8939b3882541c5885b
+
+Package: recommenderlab
+Source: CRAN
+Version: 0.2-1
+Hash: c43954418a73de868cd7f973e8877d42
+Requires: arules, irlba, proxy, registry
+
+Package: registry
+Source: CRAN
+Version: 0.3
+Hash: f9447c26b51b8c96f53720c5ff862c93
+
+Package: reshape2
+Source: CRAN
+Version: 1.4.2
+Hash: 790c06c11c84041b814139d731a872b9
+Requires: Rcpp, plyr, stringr
+
+Package: stringi
+Source: CRAN
+Version: 1.1.3
+Hash: 458dfc7d682c0f80909521fe482f7c6d
+
+Package: stringr
+Source: CRAN
+Version: 1.2.0
+Hash: 25a86d7f410513ebb7c0bc6a5e16bdc3
+Requires: magrittr, stringi
