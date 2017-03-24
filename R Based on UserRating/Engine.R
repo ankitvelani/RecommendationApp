@@ -13,11 +13,6 @@ rs <- dbSendQuery(connection, "SELECT * FROM rating")
 rating.table<-dbFetch(rs,n=-1) # Fetching All the rows for the Rating table
 rs <- dbSendQuery(connection, "SELECT * FROM paper")
 paper.table<-dbFetch(rs,n=-1) # Fetching All the Rows for the Paper Table
-
-
-rs <- dbSendQuery(connection, "SELECT * FROM user")
-user.table<-dbFetch(rs,n=-1) # Fetching All the Rows for the Paper Table
-
 dbDisconnect(connection) # Closing the MySQL Connection
 
 rating <- rating.table
@@ -37,7 +32,7 @@ ratingmat_norm <- normalize(ratingmat)
 recommender_model <- Recommender(ratingmat, method = "POPULAR")#, param=list(method="Cosine",nn=30))
 
 rm(paper)
-
+rm(paper.table)
 rm(rating)
 rm(rating.table)
 rm(connection)

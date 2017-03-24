@@ -29,18 +29,16 @@ class Home extends CI_Controller {
             $session_data = $this->session->userdata('logged_in');
             $id=$session_data['id'];
            
-          exec("Rscript ./R/RatingBasedRecommendation.R $id ",$res);
+            exec("Rscript ./R/RatingBasedRecommendation.R $id ",$res);
             $res=substr($res[0], 1, (strlen($res[0])-2));
             $paperIDs=  explode(",", $res);
-            
-           
             
             $paperDetail=array();
             foreach ($paperIDs as $id)
             {
-                $paperID=substr($id, 2,(strlen($id)-3));
-                
-                $result=$this->paper->getPaper($paperID);
+                $paperID=substr($id, 1,(strlen($id)-2));
+                 
+                 $result=$this->paper->getPaper($paperID);
                 
                 $tempDetail=array(
                     "PaperID"=>$paperID,
@@ -48,8 +46,9 @@ class Home extends CI_Controller {
                 );
                array_push($paperDetail, $tempDetail);
                 //$paperTitle[]=$result;
+                 
             }
-             
+          
              $HeaderData['username']=$session_data['username'];
              $HeaderData['keywords']=$session_data['keywords'];
              $HeaderData['paperDetail']=$paperDetail;
